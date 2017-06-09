@@ -10,7 +10,7 @@
     </resultMap>
 
     <select id="selectByNothing" resultMap="BaseResultMap">
-        select * from student
+        select * from student;
     </select>
 
 </mapper>
