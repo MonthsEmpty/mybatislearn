@@ -5,7 +5,7 @@
     <properties resource="jdbc.properties"></properties>
 
     <plugins>
-        <plugin interceptor=""></plugin>
+        <plugin interceptor="com.vincent.plugin.MybatisSpringPageInterceptor"></plugin>
     </plugins>
 
     <!-- 配置mybatis运行环境 -->

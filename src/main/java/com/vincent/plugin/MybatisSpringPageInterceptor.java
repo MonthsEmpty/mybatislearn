@@ -10,8 +10,10 @@ import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.plugin.Interceptor;
+import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Plugin;
+import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 
 import java.sql.Connection;
@@ -25,8 +27,10 @@ import java.util.logging.Logger;
 
 /**
  * mybaits 分页
+ * 参考文献：http://blog.csdn.net/leozhou13/article/details/50394242
  * Created by renwu on 2017/6/19.
  */
+@Intercepts({@Signature(method = "prepare", type = StatementHandler.class,args = {Connection.class})})
 public class MybatisSpringPageInterceptor implements Interceptor {
 
     private static final String MYSQL = "mysql";

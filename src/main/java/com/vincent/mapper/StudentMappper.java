@@ -1,6 +1,7 @@
 package com.vincent.mapper;
 
 import com.vincent.model.Student;
+import com.vincent.utils.Page;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface StudentMappper {
 
     List<Student> selectByNothing();
+
+    List<Student> selectByPage(Page page);
 }

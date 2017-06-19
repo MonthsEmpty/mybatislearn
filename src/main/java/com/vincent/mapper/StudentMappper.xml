@@ -13,4 +13,8 @@
         select * from student;
     </select>
 
+    <select id="selectByPage" parameterType="com.vincent.utils.Page" resultMap="BaseResultMap">
+        select * from student;
+    </select>
+
 </mapper>
