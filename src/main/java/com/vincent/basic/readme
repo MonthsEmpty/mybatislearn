@@ -1,1 +1,3 @@
 mybaits中大量使用了java annotation和reflect以及代理模式，这边复习下基础知识。
+
+动态代理的文章：https://www.ibm.com/developerworks/cn/java/j-lo-proxy1/
