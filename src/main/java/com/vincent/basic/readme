@@ -1,0 +1,1 @@
+mybaits中大量使用了java annotation和reflect以及代理模式，这边复习下基础知识。

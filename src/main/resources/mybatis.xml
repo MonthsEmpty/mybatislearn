@@ -12,13 +12,13 @@
     <environments default="cybatis">
         <environment id="cybatis">
             <!-- type="JDBC" 代表使用JDBC的提交和回滚来管理事务 -->
-            <transactionManager type="JDBC"/>
+            <transactionManager type="JDBC"/><!--TODO 这边使用的是jdbc的方式，那还有什么方式？又有什么区别呢？-->
             <!-- mybatis提供了3种数据源类型，分别是：POOLED,UNPOOLED,JNDI -->
             <!-- POOLED 表示支持JDBC数据源连接池 -->
             <!-- UNPOOLED 表示不支持数据源连接池 -->
             <!-- JNDI 表示支持外部数据源连接池 -->
-            <dataSource type="POOLED">
-                <property name="driver" value="${jdbc.driver}"/>
+            <dataSource type="POOLED"><!--获取java的DataSource(javax.sql.DataSource)-->
+                <property name="driver" value="${jdbc.driver}"/><!--TODO 这边的貌似是EL表达式吧，那么EL表达式是如何映射的？-->
                 <property name="url" value="${jdbc.url}"/>
                 <property name="username" value="${jdbc.username}"/>
                 <property name="password" value="${jdbc.password}"/>
