@@ -1,4 +1,4 @@
-package com.vincent.basic;
+package com.vincent.basic.proxy;
 
 /**
  * Created by Administrator on 2017/7/11.
