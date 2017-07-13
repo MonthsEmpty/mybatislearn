@@ -11,6 +11,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
 /**
+ * 测试代理模式
  * Created by Administrator on 2017/7/12.
  */
 public class DynaProxyDemo {

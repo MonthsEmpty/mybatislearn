@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.util.List;
 
 /**
+ * 测试mybatis的增删改查
  * Created by renwu on 2017/6/19.
  */
 public class TestCRUDByAnnotationMapper {

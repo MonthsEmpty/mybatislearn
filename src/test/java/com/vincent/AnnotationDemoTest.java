@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.lang.annotation.Annotation;
 
 /**
+ * 测试注解
  * Created by Administrator on 2017/7/11.
  */
 @AnnotationDemo("demo")
