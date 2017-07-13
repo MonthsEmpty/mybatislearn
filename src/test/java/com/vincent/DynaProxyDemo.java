@@ -1,5 +1,7 @@
 package com.vincent;
 
+import com.vincent.basic.proxy.AnotherSubject;
+import com.vincent.basic.proxy.AnotherSubjectImpl;
 import com.vincent.basic.proxy.MyInvocationHandler;
 import com.vincent.basic.proxy.RealSubject;
 import com.vincent.basic.proxy.Subject;
@@ -37,6 +39,15 @@ public class DynaProxyDemo {
         //以下的结果和上面的测试结果一样，反证了代理类实例调用方法时会先调用处理器的invoke()方法。
         String info = (String) invocationHandler.invoke(proxySubject, subject.getClass().getMethod("say", String.class, Integer.class), new Object[]{"vincent", 27});
         System.out.println(info);
+    }
 
+    /**
+     * 证明Proxy生成的实例实现了各种Interface。
+     */
+    @Test
+    public void testInterfacesProxy(){
+        Subject subject = new AnotherSubjectImpl();
+        AnotherSubject anotherSubject = (AnotherSubject) Proxy.newProxyInstance(subject.getClass().getClassLoader(),subject.getClass().getInterfaces(),new MyInvocationHandler(subject));
+        anotherSubject.doSomething("aaa");
     }
 }
