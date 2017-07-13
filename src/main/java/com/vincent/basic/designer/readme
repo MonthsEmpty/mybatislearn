@@ -1,0 +1,4 @@
+设计模式
+mybats用到的设计模式有工厂模式，责任链模式，动态代理
+动态代理的解释在com.vincent.basic.proxy包中
+责任链模式在com.vincent.basic.designer.chainOfResponsibility包中
