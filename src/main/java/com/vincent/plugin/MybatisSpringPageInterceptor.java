@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 /**
  * mybaits 分页
  * 参考文献：http://blog.csdn.net/leozhou13/article/details/50394242
+ * 这篇讲拦截器不错：http://elim.iteye.com/blog/1851081
  * Created by renwu on 2017/6/19.
  */
 @Intercepts({@Signature(method = "prepare", type = StatementHandler.class,args = {Connection.class})})
