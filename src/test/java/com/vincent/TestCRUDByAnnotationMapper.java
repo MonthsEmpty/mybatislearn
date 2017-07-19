@@ -32,7 +32,16 @@ public class TestCRUDByAnnotationMapper {
         List<Student> studentList = studentMappper.selectByPage(page);
         sqlSession.close();
         System.out.println(studentList.size() + "--" + studentList);
+    }
 
+    @Test
+    public void testSelectByStudent(){
+        Student student = new Student();
+        student.setAge(44);
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        StudentMappper studentMappper = sqlSession.getMapper(StudentMappper.class);
+        Student result = studentMappper.selectByStudent(student);
+        System.out.println(result);
     }
 
 }

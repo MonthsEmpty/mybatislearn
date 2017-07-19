@@ -13,4 +13,6 @@ public interface StudentMappper {
     List<Student> selectByNothing();
 
     List<Student> selectByPage(Page page);
+
+    Student selectByStudent(Student student);
 }

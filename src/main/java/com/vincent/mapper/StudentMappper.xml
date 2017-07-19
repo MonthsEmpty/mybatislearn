@@ -14,7 +14,25 @@
     </select>
 
     <select id="selectByPage" parameterType="com.vincent.utils.Page" resultMap="BaseResultMap">
+        <!--<include refid=""-->
         select * from student;
+    </select>
+
+    <select id="selectByStudent" parameterType="com.vincent.model.Student" resultType="com.vincent.model.Student">
+        select * from student
+        where 1=1
+        <if test="id != null and id != ''">
+            and id = #{id}
+        </if>
+        <if test="name != null and name != ''">
+            and name like CONCAT('%',#{name},'%')
+        </if>
+        <if test="school != null and school != ''">
+            and school like CONCAT('%',#{school},'%')
+        </if>
+        <if test="age != null and age != ''">
+            and age = #{age}
+        </if>
     </select>
 
 </mapper>
