@@ -18,7 +18,8 @@
         select * from student;
     </select>
 
-    <select id="selectByStudent" parameterType="com.vincent.model.Student" resultType="com.vincent.model.Student">
+    <!--<select id="selectByStudent" parameterType="com.vincent.model.Student" resultType="com.vincent.model.Student">-->
+    <select id="selectByStudent" parameterType="com.vincent.model.Student" resultType="com.vincent.model.Student" flushCache="true" useCache="false">
         select * from student
         where 1=1
         <if test="id != null and id != ''">

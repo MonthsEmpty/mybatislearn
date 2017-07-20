@@ -16,7 +16,7 @@ import java.util.List;
 public class TestCRUDByAnnotationMapper {
 
     @Test
-    public void testSelect(){
+    public void testSelect() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         StudentMappper studentMappper = sqlSession.getMapper(StudentMappper.class);
         List<Student> studentList = studentMappper.selectByNothing();
@@ -25,7 +25,7 @@ public class TestCRUDByAnnotationMapper {
     }
 
     @Test
-    public void testSelectByPage(){
+    public void testSelectByPage() {
         Page page = new Page();
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         StudentMappper studentMappper = sqlSession.getMapper(StudentMappper.class);
@@ -35,13 +35,25 @@ public class TestCRUDByAnnotationMapper {
     }
 
     @Test
-    public void testSelectByStudent(){
+    public void testSelectByStudent() {
         Student student = new Student();
         student.setAge(44);
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         StudentMappper studentMappper = sqlSession.getMapper(StudentMappper.class);
         Student result = studentMappper.selectByStudent(student);
         System.out.println(result);
+        sqlSession.clearCache();
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Student result1 = studentMappper.selectByStudent(student);
+        System.out.println(result1);
+        List<Student> studentList = studentMappper.selectByNothing();
+        System.out.println(studentList);
+
+
     }
 
 }
