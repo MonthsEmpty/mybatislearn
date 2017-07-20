@@ -24,7 +24,8 @@ public class JdbcDemo {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(URL,USERNAME,MM);
-            preparedStatement = connection.prepareStatement("select * from student where age = 44");
+            preparedStatement = connection.prepareStatement("select * from student where age = ?");
+            preparedStatement.setInt(1,44);
             resultSet = preparedStatement.executeQuery();
             if(resultSet != null){
                 while (resultSet.next()){
