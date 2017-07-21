@@ -1,4 +1,4 @@
-package com.vincent.basic;
+package com.vincent.basic.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

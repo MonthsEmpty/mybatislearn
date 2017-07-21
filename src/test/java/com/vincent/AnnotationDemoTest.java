@@ -1,6 +1,6 @@
 package com.vincent;
 
-import com.vincent.basic.AnnotationDemo;
+import com.vincent.basic.annotation.AnnotationDemo;
 import org.junit.Test;
 
 import java.lang.annotation.Annotation;

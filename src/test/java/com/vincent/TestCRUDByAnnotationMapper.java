@@ -65,10 +65,11 @@ public class TestCRUDByAnnotationMapper {
         StudentMappper studentMappper = sqlSession.getMapper(StudentMappper.class);
         Student result = studentMappper.selectByStudent(student);
         System.out.println(result);
-        sqlSession.clearCache();
+      /*  sqlSession.clearCache();
+        *//*对student表做一些修改操作*//*
         StudentMappper studentMappper1 = sqlSession.getMapper(StudentMappper.class);
         Student result1 = studentMappper1.selectByStudent(student);
-        System.out.println(result1);
+        System.out.println(result1);*/
     }
 
 }
