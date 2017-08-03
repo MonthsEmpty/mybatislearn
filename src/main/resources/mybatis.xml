@@ -31,5 +31,6 @@
     </environments>
     <mappers>
         <mapper resource="com/vincent/mapper/StudentMappper.xml"/>
+        <mapper resource="com/vincent/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>
