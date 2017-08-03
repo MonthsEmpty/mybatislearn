@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.mapper.UserMapper">
+
+    <select id="selectByUser" parameterType="com.vincent.model.User" resultType="com.vincent.model.User">
+        SELECT * from USER
+        WHERE 1=1
+        <if test="id != null and id != ''">
+            and id = #{id}
+        </if>
+        <if test="username != null and username != ''">
+            and username like CONCAT('%',#{username},'%')
+        </if>
+        <if test="password != null and password != ''">
+            and password = #{password}
+        </if>
+        <if test="birthday != null">
+            and birthday = #{birthday}
+        </if>
+    </select>
+</mapper>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vincent.mapper.StudentMappper">
+    <!-- 解析后存在Configure的Map<String, ResultMap> resultMaps这个map中，key就是id-->
     <resultMap id="BaseResultMap" type="com.vincent.model.Student">
         <id column="id" property="id" javaType="java.lang.Integer"/>
         <!--<result property="id" column="id" javaType="java.lang.Integer"/>-->
